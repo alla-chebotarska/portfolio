@@ -1,37 +1,71 @@
-import React from "react";
+import { Box, Typography, Divider, List, ListItem, ListItemText } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
+import { makeStyles, Theme } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
-import Link from "@material-ui/core/Link";
+import React from "react";
 import { Link as Scrolling } from "react-scroll";
-import { Box } from "@material-ui/core";
+
+const useStyles = makeStyles((theme: Theme) => ({
+  NavigationToolbar: {
+    flexWrap: "wrap",
+    alignItems: "center",
+    backgroundColor: "white",
+  },
+  NavigationToolbarTitle: {
+    flexGrow: 1,
+  },
+  navigationList: {
+display: "flex",
+flexDirection: "row",
+  },
+  NavigationLinkBox: {
+    marginRight: theme.spacing(2),
+  },
+}));
 
 function createData(title: string, href: string) {
   return { title, href };
 }
 
 const navigationList = [
-  createData("Portfolio", "portfolio"),
   createData("About", "about"),
+  createData("Portfolio", "portfolio"),
+  createData("Contact", "contact"),
 ];
 
 export default function Navigation() {
+  const classes = useStyles();
   return (
-    <AppBar position="static" color="default" elevation={0}>
-      <Toolbar>
-        <Box display={{ xs: "none", sm: "block" }}>
-          {navigationList.map((item) => (
-            <Scrolling
-              key={item.title}
-              color="textPrimary"
-              to={item.href}
-              spy={true}
-              smooth={true}
-            >
-              <Link>{item.title}</Link>
-            </Scrolling>
-          ))}
-        </Box>
-      </Toolbar>
-    </AppBar>
+    <>
+      <AppBar position="static" color="default" elevation={0}>
+        <Toolbar className={classes.NavigationToolbar}>
+          <Typography
+            variant="h6"
+            color="inherit"
+            noWrap
+            className={classes.NavigationToolbarTitle}
+          >
+            Alla Chebotarska
+          </Typography>
+          <Box display={{ xs: 'none', sm: 'block' }} className={classes.NavigationLinkBox}>
+            <List className={classes.navigationList}>
+              {navigationList.map((item) => (
+                <ListItem key={item.title}>
+                  <Scrolling
+                    color="textPrimary"
+                    to={item.href}
+                    spy={true}
+                    smooth={true}
+                  >
+                      <ListItemText primary={item.title} />
+                  </Scrolling>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Divider />
+    </>
   );
 }
