@@ -1,4 +1,11 @@
-import { Box, Typography, Divider, List, ListItem, ListItemText } from "@material-ui/core";
+import {
+  Box,
+  Typography,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+} from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -15,11 +22,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
   },
   navigationList: {
-display: "flex",
-flexDirection: "row",
+    display: "flex",
+    flexDirection: "row",
   },
   NavigationLinkBox: {
     marginRight: theme.spacing(2),
+  },
+  NavigationListItemText: {
+   
   },
 }));
 
@@ -47,7 +57,10 @@ export default function Navigation() {
           >
             Alla Chebotarska
           </Typography>
-          <Box display={{ xs: 'none', sm: 'block' }} className={classes.NavigationLinkBox}>
+          <Box
+            display={{ xs: "none", sm: "block" }}
+            className={classes.NavigationLinkBox}
+          >
             <List className={classes.navigationList}>
               {navigationList.map((item) => (
                 <ListItem key={item.title}>
@@ -57,7 +70,7 @@ export default function Navigation() {
                     spy={true}
                     smooth={true}
                   >
-                      <ListItemText primary={item.title} />
+                    <ListItemText primary={item.title} className={classes.NavigationListItemText} />
                   </Scrolling>
                 </ListItem>
               ))}

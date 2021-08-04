@@ -5,6 +5,7 @@ import { Container, Box } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import Portfolio from "../Portfolio/Portfolio";
 import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 
 const useStyles = makeStyles((theme: Theme) => ({
   landingContainer: {
@@ -32,6 +33,7 @@ export default function LandingPage() {
           <Contact />
         </Box>
       </Container>
+      <Footer />
     </>
   );
 }
