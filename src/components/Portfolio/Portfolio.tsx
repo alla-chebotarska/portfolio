@@ -1,8 +1,16 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  Typography,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+} from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import waterly from "../../img/waterly.png";
-import okhelp from "../../img/okhelp.png";
 import React from "react";
+import okhelp from "../../img/okhelp.png";
+import waterly from "../../img/waterly.png";
 
 const useStyles = makeStyles((theme: Theme) => ({
   portfolioContainer: {
@@ -21,17 +29,28 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   portfolioExample: {
     [theme.breakpoints.down("sm")]: {
-        width: "100%"
-      },
-      [theme.breakpoints.up("md")]: {
-        width: "80%"
-      },
+      width: "100%",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "80%",
+    },
+  },
+  portfolioCardContainer: {
+    width: 450,
+  },
+  portfolioCardMedia: {
+    height: 220,
+  },
+  portfolioExampleButtonContainer: {
+    paddingBottom: theme.spacing(2),
   },
 }));
 
 export type LandingListInfo = {
   img: any;
+  title: string;
   description: string;
+  link: string;
 };
 
 const Portfolio = () => {
@@ -39,11 +58,17 @@ const Portfolio = () => {
   const portfolioList: LandingListInfo[] = [
     {
       img: waterly,
-      description: "Waterly - helps you to take care of your plants",
+      title: "Waterly - helps to take care of your plants",
+      description:
+        "Created all application from scratch using JavaScript, React, Material-UI and Firebase",
+      link: "https://plant-care.web.app/",
     },
     {
       img: okhelp,
-      description: "okHelp - helps your family plan for emergensies",
+      title: "OKHelp",
+      description:
+        "Implemented a new design for the landing page which extended functionality and user friendly process using React, Typescript and Material-UI",
+      link: "https://www.okhelp.org/",
     },
   ];
 
@@ -51,15 +76,25 @@ const Portfolio = () => {
     list.map((item, idx) => (
       <Grid item key={idx} xs={12} md={6}>
         <Box display="flex" justifyContent="center">
-          <img
-            src={item.img}
-            alt="portfolio example"
-            className={classes.portfolioExample}
-          />
+          <Card
+            className={classes.portfolioCardContainer}
+          >
+            <CardActionArea onClick={() => window.open(item.link, "_blank")}>
+              <CardMedia
+                className={classes.portfolioCardMedia}
+                image={item.img}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="h2">
+                  {item.title}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {item.description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
         </Box>
-        <Typography variant="body1" align="center">
-          {item.description}
-        </Typography>
       </Grid>
     ));
   return (

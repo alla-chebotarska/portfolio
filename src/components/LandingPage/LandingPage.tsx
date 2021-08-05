@@ -9,11 +9,19 @@ import Portfolio from "../Portfolio/Portfolio";
 
 
 const theme = createTheme ({
+  palette: {
+    primary: {
+      main: "#333333",
+    }
+  },
   typography: {
     h6: {
       fontFamily: ["Cardo", "Times New Roman", 'sans-serif'].join(','),
     },
     body1: {
+      fontFamily: ["Cardo", "Times New Roman", 'sans-serif'].join(','),
+    },
+    body2: {
       fontFamily: ["Cardo", "Times New Roman", 'sans-serif'].join(','),
     },
   },
