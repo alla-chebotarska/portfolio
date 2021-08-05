@@ -1,5 +1,13 @@
 import React from "react";
-import { Grid, Typography, Box } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+  ListSubheader,
+} from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core";
 import about from "../../img/about.jpg";
 
@@ -24,6 +32,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       backgroundColor: "black",
     },
   },
+  aboutSkillsList: {
+    padding: theme.spacing(0),
+  },
   aboutImage: {
     borderRadius: "50%",
     [theme.breakpoints.down("sm")]: {
@@ -38,6 +49,20 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
+function createData(description: string) {
+  return { description };
+}
+
+const skillsList = [
+  createData("TypeScript, JavaScript, Java"),
+  createData("React, Material-UI, Bootstrap, Firebase"),
+  createData("HTML5, CSS3, Node.js"),
+  createData("PostgreSQL, MySQL"),
+  createData("Git"),
+  createData("Jest/Enzyme"),
+  createData("Figma"),
+];
+
 export default function About() {
   const classes = useStyles();
   return (
@@ -47,28 +72,23 @@ export default function About() {
       </Typography>
       <Grid container className={classes.aboutContainer}>
         <Grid item xs={12} md={6}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          pellentesque purus vel justo mattis iaculis. Cras aliquet sodales
-          diam, vitae tincidunt leo posuere sed. Etiam imperdiet, massa nec
-          venenatis lobortis, metus turpis tristique enim, eget sollicitudin
-          enim lacus non ante. Aliquam a eros quis risus dignissim rhoncus.
-          Suspendisse potenti. Maecenas ut risus imperdiet, hendrerit quam
-          egestas, dictum eros. Vestibulum ultricies augue sapien, vitae
-          imperdiet quam porttitor quis. Morbi faucibus vitae enim sit amet
-          pharetra. Praesent vitae odio at eros condimentum fringilla ac id
-          arcu. Vestibulum vitae nunc id dolor posuere faucibus gravida sit amet
-          massa. Fusce dignissim, tellus vitae consectetur malesuada, ligula
-          turpis mollis arcu, sed ornare metus est quis justo. Praesent
-          sollicitudin nunc id placerat luctus. Aenean blandit leo vel nunc
-          accumsan, eget porta arcu tincidunt. Suspendisse non enim et tellus
-          ullamcorper congue sed a justo. Duis consequat mauris eu sollicitudin
-          sagittis. Fusce fermentum dictum eros quis tincidunt. Pellentesque
-          neque velit, pretium et efficitur a, accumsan at neque. Proin in
-          ligula sollicitudin, dapibus purus ornare, mattis lorem. Praesent in
-          faucibus magna. Mauris sit amet libero interdum, venenatis sem sit
-          amet, placerat nunc. Etiam vitae sagittis diam. Donec scelerisque
-          facilisis magna, eget consectetur sapien iaculis et. Nulla non mollis
-          magna. Mauris non dui et nisl tempus porttitor.
+          <Typography variant="body1">
+            I am a Junior Front end Developer with 2 years of experience, located
+            in Vancouver, BC. My background is in Computer Science and I did my
+            master's degree at Lodz University of Technology, Poland. Passionate
+            about creating modern, easy to use and built with best practices
+            websites.
+          </Typography>
+          <List>
+            <ListSubheader className={classes.aboutSkillsList}>
+              Skills:{" "}
+            </ListSubheader>
+            {skillsList.map((item, idx) => (
+              <ListItem key={idx} className={classes.aboutSkillsList}>
+                <ListItemText primary={item.description} />
+              </ListItem>
+            ))}
+          </List>
         </Grid>
         <Grid item xs={12} md={6}>
           <Box display="flex" justifyContent="center">

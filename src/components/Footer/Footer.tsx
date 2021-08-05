@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     footerTypography: {
         color: "white",
-        fontFamily: ["Cardo", "Times New Roman", 'sans-serif'].join(','),
     }
   }));
 
@@ -18,7 +17,7 @@ export default function Footer() {
     const classes = useStyles();
     return (
         <Box className={classes.footerContainer}>
-            <Typography variant="subtitle1" className={classes.footerTypography}>&copy;2021 Alla Chebotarska</Typography>
+            <Typography variant="body1" className={classes.footerTypography}>&copy;2021 Alla Chebotarska</Typography>
         </Box>
     )
 }

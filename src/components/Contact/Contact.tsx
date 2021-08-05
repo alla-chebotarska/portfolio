@@ -2,6 +2,7 @@ import { Box, Grid, Link, Typography } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import EmailIcon from '@material-ui/icons/Email';
 import React from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -26,8 +27,18 @@ function createData(icon: React.ReactNode, href: string) {
 }
 
 const contactList = [
-  createData(<GitHubIcon fontSize="large"/>, "https://github.com/alla-chebotarska"),
-  createData(<LinkedInIcon fontSize="large"/>, "https://github.com/alla-chebotarska"),
+  createData(
+    <GitHubIcon fontSize="large" />,
+    "https://github.com/alla-chebotarska"
+  ),
+  createData(
+    <LinkedInIcon fontSize="large" />,
+    "https://github.com/alla-chebotarska"
+  ),
+  createData(
+    <EmailIcon fontSize="large" />,
+    "mailto:alla.chebotarska@gmail.com"
+  ),
 ];
 
 export default function Contact() {
@@ -39,7 +50,8 @@ export default function Contact() {
         Contact
       </Typography>
       <Typography>
-        This section will contain links to social networks and a map
+        I’m always open to discussing product design work or partnership
+        opportunities.
       </Typography>
       <Grid container>
         <Grid item xs={12}>

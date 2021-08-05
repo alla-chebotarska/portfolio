@@ -25,12 +25,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     flexDirection: "row",
   },
+  navigationListItem: {
+    cursor: "pointer",
+  },
   NavigationLinkBox: {
     marginRight: theme.spacing(2),
   },
-  NavigationListItemText: {
-   
-  },
+  NavigationListItemText: {},
 }));
 
 function createData(title: string, href: string) {
@@ -63,14 +64,20 @@ export default function Navigation() {
           >
             <List className={classes.navigationList}>
               {navigationList.map((item) => (
-                <ListItem key={item.title}>
+                <ListItem
+                  key={item.title}
+                  className={classes.navigationListItem}
+                >
                   <Scrolling
                     color="textPrimary"
                     to={item.href}
                     spy={true}
                     smooth={true}
                   >
-                    <ListItemText primary={item.title} className={classes.NavigationListItemText} />
+                    <ListItemText
+                      primary={item.title}
+                      className={classes.NavigationListItemText}
+                    />
                   </Scrolling>
                 </ListItem>
               ))}

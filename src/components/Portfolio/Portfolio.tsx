@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import waterly from "../../img/waterly.jpg";
-import okhelp from "../../img/okhelp.jpg";
+import waterly from "../../img/waterly.png";
+import okhelp from "../../img/okhelp.png";
 import React from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: "100%"
       },
       [theme.breakpoints.up("md")]: {
-        width: "50%"
+        width: "80%"
       },
   },
 }));
@@ -39,11 +39,11 @@ const Portfolio = () => {
   const portfolioList: LandingListInfo[] = [
     {
       img: waterly,
-      description: "Helps you to take care of your plants",
+      description: "Waterly - helps you to take care of your plants",
     },
     {
       img: okhelp,
-      description: "Plan your family for emergensies",
+      description: "okHelp - helps your family plan for emergensies",
     },
   ];
 
@@ -57,7 +57,7 @@ const Portfolio = () => {
             className={classes.portfolioExample}
           />
         </Box>
-        <Typography variant="subtitle1" align="center">
+        <Typography variant="body1" align="center">
           {item.description}
         </Typography>
       </Grid>
@@ -67,7 +67,7 @@ const Portfolio = () => {
       <Typography variant="h3" className={classes.portfolioHeader}>
         Portfolio
       </Typography>
-      <Grid container spacing={5}>
+      <Grid container spacing={1}>
         {renderList(portfolioList)}
       </Grid>
     </Box>

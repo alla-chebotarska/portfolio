@@ -1,11 +1,23 @@
+import { Box, Container } from "@material-ui/core";
+import { makeStyles, Theme,  MuiThemeProvider, createTheme  } from "@material-ui/core/styles";
 import React from "react";
 import About from "../About/About";
-import Navigation from "../Navigation/Navigation";
-import { Container, Box } from "@material-ui/core";
-import { makeStyles, Theme } from "@material-ui/core/styles";
-import Portfolio from "../Portfolio/Portfolio";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
+import Navigation from "../Navigation/Navigation";
+import Portfolio from "../Portfolio/Portfolio";
+
+
+const theme = createTheme ({
+  typography: {
+    h6: {
+      fontFamily: ["Cardo", "Times New Roman", 'sans-serif'].join(','),
+    },
+    body1: {
+      fontFamily: ["Cardo", "Times New Roman", 'sans-serif'].join(','),
+    },
+  },
+});
 
 const useStyles = makeStyles((theme: Theme) => ({
   landingContainer: {
@@ -16,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 export default function LandingPage() {
   const classes = useStyles();
   return (
-    <>
+    <MuiThemeProvider theme={theme}>
       <Navigation />
       <Container
         maxWidth={false}
@@ -34,6 +46,6 @@ export default function LandingPage() {
         </Box>
       </Container>
       <Footer />
-    </>
+    </MuiThemeProvider>
   );
 }
