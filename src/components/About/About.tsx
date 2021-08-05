@@ -6,14 +6,13 @@ import {
   List,
   ListItem,
   ListItemText,
-  ListSubheader,
 } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core";
 import about from "../../img/about.jpg";
 
 const useStyles = makeStyles((theme: Theme) => ({
   aboutContainer: {
-    padding: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column-reverse",
     },
@@ -21,18 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       direction: "row",
     },
   },
-  aboutHeader: {
-    marginBottom: theme.spacing(5),
-    "&::after": {
-      content: '" "',
-      display: "block",
-      width: 100,
-      height: 1,
-      margin: theme.spacing(2, 0),
-      backgroundColor: "black",
-    },
-  },
-  aboutSkillsList: {
+  aboutSkillsListItem: {
     padding: theme.spacing(0),
   },
   aboutImage: {
@@ -67,14 +55,11 @@ export default function About() {
   const classes = useStyles();
   return (
     <>
-      <Typography variant="h3" className={classes.aboutHeader}>
-        About me
-      </Typography>
       <Grid container className={classes.aboutContainer}>
         <Grid item xs={12} md={6}>
-          <Typography variant="h6">
-            Oh, hello, nice to meet you!
-          </Typography>
+          <Box pb={2}>
+            <Typography variant="h6">Oh, hello, nice to meet you!</Typography>
+          </Box>
           <Typography variant="body1">
             I am a Junior Front end Developer with 2 years of experience,
             located in Vancouver, BC. My background is in Computer Science and I
@@ -82,12 +67,12 @@ export default function About() {
             Passionate about creating modern, easy to use and built with best
             practices websites.
           </Typography>
+          <Box pt={2}>
+            <Typography variant="h6">Skills:</Typography>
+          </Box>
           <List>
-            <ListSubheader className={classes.aboutSkillsList}>
-              Skills:{" "}
-            </ListSubheader>
             {skillsList.map((item, idx) => (
-              <ListItem key={idx} className={classes.aboutSkillsList}>
+              <ListItem key={idx} className={classes.aboutSkillsListItem}>
                 <ListItemText primary={item.description} />
               </ListItem>
             ))}

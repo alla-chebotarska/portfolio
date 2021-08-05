@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   NavigationToolbarTitle: {
     flexGrow: 1,
+    paddingLeft: theme.spacing(3),
   },
   navigationList: {
     display: "flex",
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     cursor: "pointer",
   },
   NavigationLinkBox: {
-    marginRight: theme.spacing(2),
+    paddingRight: theme.spacing(3),
   },
   NavigationListItemText: {},
 }));

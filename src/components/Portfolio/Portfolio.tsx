@@ -13,20 +13,6 @@ import okhelp from "../../img/okhelp.png";
 import waterly from "../../img/waterly.png";
 
 const useStyles = makeStyles((theme: Theme) => ({
-  portfolioContainer: {
-    padding: theme.spacing(2),
-  },
-  portfolioHeader: {
-    marginBottom: theme.spacing(5),
-    "&::after": {
-      content: '" "',
-      display: "block",
-      width: 100,
-      height: 1,
-      margin: theme.spacing(2, 0),
-      backgroundColor: "black",
-    },
-  },
   portfolioExample: {
     [theme.breakpoints.down("sm")]: {
       width: "100%",
@@ -75,10 +61,8 @@ const Portfolio = () => {
   const renderList = (list: LandingListInfo[]) =>
     list.map((item, idx) => (
       <Grid item key={idx} xs={12} md={6}>
-        <Box display="flex" justifyContent="center">
-          <Card
-            className={classes.portfolioCardContainer}
-          >
+        <Box display="flex" justifyContent="center" pb={2}>
+          <Card className={classes.portfolioCardContainer}>
             <CardActionArea onClick={() => window.open(item.link, "_blank")}>
               <CardMedia
                 className={classes.portfolioCardMedia}
@@ -98,13 +82,10 @@ const Portfolio = () => {
       </Grid>
     ));
   return (
-    <Box className={classes.portfolioContainer}>
-      <Typography variant="h3" className={classes.portfolioHeader}>
-        Portfolio
-      </Typography>
-      <Grid container spacing={1}>
-        {renderList(portfolioList)}
-      </Grid>
+    <Box>
+        <Grid container spacing={1}>
+          {renderList(portfolioList)}
+        </Grid>
     </Box>
   );
 };

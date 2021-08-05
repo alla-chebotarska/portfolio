@@ -6,17 +6,6 @@ import EmailIcon from '@material-ui/icons/Email';
 import React from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
-  contactHeader: {
-    marginBottom: theme.spacing(5),
-    "&::after": {
-      content: '" "',
-      display: "block",
-      width: 100,
-      height: 1,
-      margin: theme.spacing(2, 0),
-      backgroundColor: "black",
-    },
-  },
   contactIcon: {
     margin: theme.spacing(1),
   },
@@ -46,9 +35,6 @@ export default function Contact() {
 
   return (
     <>
-      <Typography variant="h3" className={classes.contactHeader}>
-        Contact
-      </Typography>
       <Typography>
         I’m always open to discussing product design work or partnership
         opportunities.
