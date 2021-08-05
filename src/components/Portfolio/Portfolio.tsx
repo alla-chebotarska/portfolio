@@ -44,16 +44,16 @@ const Portfolio = () => {
   const portfolioList: LandingListInfo[] = [
     {
       img: waterly,
-      title: "Waterly - helps to take care of your plants",
+      title: "Waterly",
       description:
-        "Created all application from scratch using JavaScript, React, Material-UI and Firebase",
+        "Helps to take care of your plants. Created all application from scratch using JavaScript, React, Material-UI and Firebase",
       link: "https://plant-care.web.app/",
     },
     {
       img: okhelp,
       title: "OKHelp",
       description:
-        "Implemented a new design for the landing page which extended functionality and user friendly process using React, Typescript and Material-UI",
+        "Implemented a new design for the landing page which extended functionality and user friendly process using React, TypeScript and Material-UI",
       link: "https://www.okhelp.org/",
     },
   ];
