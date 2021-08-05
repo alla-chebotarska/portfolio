@@ -72,12 +72,15 @@ export default function About() {
       </Typography>
       <Grid container className={classes.aboutContainer}>
         <Grid item xs={12} md={6}>
+          <Typography variant="h6">
+            Oh, hello, nice to meet you!
+          </Typography>
           <Typography variant="body1">
-            I am a Junior Front end Developer with 2 years of experience, located
-            in Vancouver, BC. My background is in Computer Science and I did my
-            master's degree at Lodz University of Technology, Poland. Passionate
-            about creating modern, easy to use and built with best practices
-            websites.
+            I am a Junior Front end Developer with 2 years of experience,
+            located in Vancouver, BC. My background is in Computer Science and I
+            did my master's degree at Lodz University of Technology, Poland.
+            Passionate about creating modern, easy to use and built with best
+            practices websites.
           </Typography>
           <List>
             <ListSubheader className={classes.aboutSkillsList}>
