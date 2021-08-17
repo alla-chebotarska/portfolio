@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core";
-import about from "../../img/about.jpg";
+import about from "../../img/me_small.png";
 
 const useStyles = makeStyles((theme: Theme) => ({
   aboutContainer: {
@@ -61,11 +61,14 @@ export default function About() {
             <Typography variant="h6">Oh, hello, nice to meet you!</Typography>
           </Box>
           <Typography variant="body1">
-            I am a Junior Front end Developer with 2 years of experience,
-            located in Vancouver, BC. My background is in Computer Science and I
-            did my master's degree at Lodz University of Technology, Poland.
-            Passionate about creating modern, easy to use and built with best
-            practices websites.
+            My name is Alla Chebotarska and I'm a Junior Front end Developer with 2
+            years of experience, located in Vancouver, BC. My background is in
+            Computer Science and I did my master's degree at Lodz University of
+            Technology, Poland. I am very passionate and dedicated to my work
+            and always open to learning new technologies and frameworks. I am an
+            ambitious and exceptionally organized person, who is recognized for
+            the ability to communicate effectively, work as part of a team and
+            solve problems creatively.
           </Typography>
           <Box pt={2}>
             <Typography variant="h6">Skills:</Typography>

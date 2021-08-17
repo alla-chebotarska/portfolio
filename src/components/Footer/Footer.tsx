@@ -4,7 +4,7 @@ import { Box, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) => ({
     footerContainer: {
-        backgroundColor: "black",
+        backgroundColor: theme.palette.primary.main,
         padding: theme.spacing(5),
         fontStyle: "italic",
     },

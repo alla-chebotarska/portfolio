@@ -8,9 +8,8 @@ import {
   CardMedia,
 } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import React from "react";
-import okhelp from "../../img/okhelp.png";
-import waterly from "../../img/waterly.png";
+import okhelp from "../../img/okhelp_color.png";
+import waterly from "../../img/waterly_color.png";
 
 const useStyles = makeStyles((theme: Theme) => ({
   portfolioExample: {
@@ -46,14 +45,14 @@ const Portfolio = () => {
       img: waterly,
       title: "Waterly",
       description:
-        "Helps to take care of your plants. Created all application from scratch using JavaScript, React, Material-UI and Firebase",
+        "Proprietary web application that helps users to take care of their plants. Was created from scratch using HTML/CSS, JavaScript, React, Material-UI and Firebase",
       link: "https://plant-care.web.app/",
     },
     {
       img: okhelp,
       title: "OKHelp",
       description:
-        "Implemented a new design for the landing page which extended functionality and user friendly process using React, TypeScript and Material-UI",
+        "Helps people plan for emergencies. I've implemented a new design for the landing page which extended functionality and user-friendly process, using React, TypeScript, and Material-UI",
       link: "https://www.okhelp.org/",
     },
   ];

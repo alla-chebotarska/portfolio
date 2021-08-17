@@ -1,7 +1,6 @@
 import { Box } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import React from "react";
-import Image from "../../img/banner.jpg"; // Import using relative path
+import Image from "../../img/banner_color.jpg";
 
 const useStyles = makeStyles((theme: Theme) => ({
   banner: {
@@ -9,8 +8,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    background: `linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(${Image})`,
-    opacity: 0.6,
+    background: `linear-gradient( rgba(1, 1, 1, 0.1), rgba(1, 1, 1, 0.1) ), url(${Image})`,
   },
   bannerCaption: {
     position: "absolute",
@@ -18,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     top: "30%",
     width: "100%",
     textAlign: "center",
-    color: 'black',
+    color: "black",
   },
   bannerTextItalic: {
     color: "white",
@@ -33,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: "2.8rem",
     fontWeight: 700,
     fontFamily: ["Montserrat", "sans-serif"].join(","),
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
 }));
 
@@ -42,9 +40,19 @@ export default function Banner() {
   return (
     <Box className={classes.banner}>
       <Box className={classes.bannerCaption}>
-        <span className={classes.bannerTextItalic}>Oh, hello, nice to meet you!</span><br/><br/><br/>
-        <span className={classes.bannerText}>I am a Front End Developer</span><br/><br/><br/>
-        <span className={classes.bannerTextItalic}>I code beautifully simple things, and I love what I do</span>
+        <span className={classes.bannerTextItalic}>
+          Oh, hello, nice to meet you!
+        </span>
+        <br />
+        <br />
+        <br />
+        <span className={classes.bannerText}>I am a Front End Developer</span>
+        <br />
+        <br />
+        <br />
+        <span className={classes.bannerTextItalic}>
+          I code beautifully simple things, and I love what I do
+        </span>
       </Box>
     </Box>
   );
