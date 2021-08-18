@@ -3,7 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "site": "alla-chebotarska-portfolio",
+    "site": "alla-chebotarska",
     "public": "build",
     "ignore": [
       "firebase.json",
