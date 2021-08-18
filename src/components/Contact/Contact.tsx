@@ -2,7 +2,7 @@ import { Box, Grid, Link, Typography } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import EmailIcon from '@material-ui/icons/Email';
+import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <>
       <Typography>
-        I’m always open to discussing product design work or partnership
+        I’am always open to discuss product development work or partnership
         opportunities.
       </Typography>
       <Grid container>

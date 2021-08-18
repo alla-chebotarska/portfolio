@@ -9,7 +9,6 @@ import {
 import AppBar from "@material-ui/core/AppBar";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
-import React from "react";
 import { Link as Scrolling } from "react-scroll";
 
 const useStyles = makeStyles((theme: Theme) => ({

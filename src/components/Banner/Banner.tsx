@@ -1,5 +1,6 @@
-import { Box } from "@material-ui/core";
+import { Box, Button } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
+import { Link as Scrolling } from "react-scroll";
 import Image from "../../img/banner_color.jpg";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -33,6 +34,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontFamily: ["Montserrat", "sans-serif"].join(","),
     textTransform: "uppercase",
   },
+  bannerButton: {
+    backgroundColor: theme.palette.primary.main,
+    color: "white",
+    fontFamily: ["Cardo", "Times New Roman", "sans-serif"].join(","),
+    textTransform: "capitalize",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
+  },
 }));
 
 export default function Banner() {
@@ -53,6 +63,12 @@ export default function Banner() {
         <span className={classes.bannerTextItalic}>
           I code beautifully simple things, and I love what I do
         </span>
+        <br />
+        <br />
+        <br />
+        <Scrolling color="textPrimary" to="navigation" spy={true} smooth={true}>
+          <Button className={classes.bannerButton}>More</Button>
+        </Scrolling>
       </Box>
     </Box>
   );

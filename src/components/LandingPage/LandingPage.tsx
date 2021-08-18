@@ -1,8 +1,5 @@
 import { Box, Container } from "@material-ui/core";
-import {
-  makeStyles,
-  Theme
-} from "@material-ui/core/styles";
+import { makeStyles, Theme } from "@material-ui/core/styles";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Contact from "../Contact/Contact";
@@ -22,7 +19,9 @@ export default function LandingPage() {
   return (
     <>
       <Banner />
-      <Navigation />
+      <Box id="navigation">
+        <Navigation />
+      </Box>
       <Container
         maxWidth={false}
         disableGutters

@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
-    sectionHeader: {
+  sectionHeader: {
     marginBottom: theme.spacing(5),
     "&::after": {
       content: '" "',
@@ -10,13 +10,13 @@ const useStyles = makeStyles((theme: Theme) => ({
       width: 100,
       height: 1,
       margin: theme.spacing(2, 0),
-      backgroundColor: "black",
+      backgroundColor: theme.palette.primary.dark,
     },
   },
 }));
 
 interface ITitle {
-    text: string;
+  text: string;
 }
 
 export default function SectionHeader(props: ITitle) {
