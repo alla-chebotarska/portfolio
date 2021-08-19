@@ -1,13 +1,9 @@
-import React from "react";
 import {
-  Grid,
-  Typography,
-  Box,
-  List,
+  Box, Grid, List,
   ListItem,
-  ListItemText,
+  ListItemText, makeStyles, Theme, Typography
 } from "@material-ui/core";
-import { makeStyles, Theme } from "@material-ui/core";
+import React from "react";
 import about from "../../img/alla.jpg";
 
 const useStyles = makeStyles((theme: Theme) => ({
