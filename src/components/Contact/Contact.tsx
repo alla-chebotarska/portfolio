@@ -1,4 +1,4 @@
-import { Box, Grid, Link, Typography } from "@material-ui/core";
+import { Box, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -22,7 +22,7 @@ const contactList = [
   ),
   createData(
     <LinkedInIcon fontSize="large" />,
-    "https://github.com/alla-chebotarska"
+    "https://www.linkedin.com/in/alla-chebotarska/"
   ),
   createData(
     <EmailIcon fontSize="large" />,
@@ -43,14 +43,13 @@ export default function Contact() {
         <Grid item xs={12}>
           <Box display="flex" justifyContent="center">
             {contactList.map((item, idx) => (
-              <Link
+              <Button
                 key={idx}
-                href={item.href}
-                color="inherit"
                 className={classes.contactIcon}
+                onClick={() => window.open(item.href, "_blank")}
               >
                 {item.icon}
-              </Link>
+              </Button>
             ))}
           </Box>
         </Grid>
