@@ -31,7 +31,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   NavigationLinkBox: {
     paddingRight: theme.spacing(3),
   },
-  NavigationListItemText: {},
+  NavigationListItemText: {
+    fontWeight: 600,
+  },
 }));
 
 function createData(title: string, href: string) {

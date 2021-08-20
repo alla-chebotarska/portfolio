@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <>
       <Typography>
-        I’am always open to discuss product development work or partnership
+        I am always open to discuss product development work or partnership
         opportunities.
       </Typography>
       <Grid container>
