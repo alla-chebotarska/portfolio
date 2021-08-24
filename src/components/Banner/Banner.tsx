@@ -36,6 +36,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   bannerButton: {
     backgroundColor: theme.palette.primary.main,
+    paddingLeft: theme.spacing(6),
+    paddingRight: theme.spacing(6),
     color: "white",
     fontFamily: ["Cardo", "Times New Roman", "sans-serif"].join(","),
     textTransform: "capitalize",
@@ -67,7 +69,11 @@ export default function Banner() {
         <br />
         <br />
         <Scrolling color="textPrimary" to="navigation" spy={true} smooth={true}>
-          <Button className={classes.bannerButton}>More</Button>
+          <Button
+            className={classes.bannerButton}
+          >
+            More
+          </Button>
         </Scrolling>
       </Box>
     </Box>
