@@ -10,6 +10,7 @@ import {
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import okhelp from "../../img/okhelp_color.png";
 import waterly from "../../img/waterly_color.png";
+import waterly_landing from "../../img/waterly_landing_color.png";
 
 const useStyles = makeStyles((theme: Theme) => ({
   portfolioExample: {
@@ -49,18 +50,25 @@ const Portfolio = () => {
       link: "https://plant-care.web.app/",
     },
     {
+      img: waterly_landing,
+      title: "Waterly-Landing",
+      description:
+        "Landing page for andriod application. Was created from scratch using HTML/CSS, TypeScript, React, Material-UI and Firebase.",
+      link: "https://waterly.web.app/",
+    },
+    {
       img: okhelp,
       title: "OKHelp",
       description:
-        "Helps people plan for emergencies. I've implemented a new design for the landing page which extended functionality and user-friendly process, using React, TypeScript, and Material-UI",
+        "I've implemented a new design for the landing page which extended functionality and user-friendly process, using React, TypeScript, and Material-UI",
       link: "https://www.okhelp.org/",
     },
   ];
 
   const renderList = (list: LandingListInfo[]) =>
     list.map((item, idx) => (
-      <Grid item key={idx} xs={12} md={6}>
-        <Box display="flex" justifyContent="center" pb={2}>
+      <Grid item key={idx} xs={12} md={4}>
+        <Box display="flex" justifyContent="center" pb={2} m={2}>
           <Card className={classes.portfolioCardContainer}>
             <CardActionArea onClick={() => window.open(item.link, "_blank")}>
               <CardMedia
@@ -82,9 +90,9 @@ const Portfolio = () => {
     ));
   return (
     <Box>
-        <Grid container spacing={1}>
-          {renderList(portfolioList)}
-        </Grid>
+      <Grid container spacing={1}>
+        {renderList(portfolioList)}
+      </Grid>
     </Box>
   );
 };
