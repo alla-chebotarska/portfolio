@@ -11,6 +11,9 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 import okhelp from "../../img/okhelp_color.png";
 import waterly from "../../img/waterly_color.png";
 import waterly_landing from "../../img/waterly_landing_color.png";
+import covidTimeline from '../../img/covid_timeline.png';
+import learnDiabetes from '../../img/learn_diabetes.png';
+import compass from '../../img/compass.png';
 
 const useStyles = makeStyles((theme: Theme) => ({
   portfolioExample: {
@@ -43,6 +46,27 @@ const Portfolio = () => {
   const classes = useStyles();
   const portfolioList: LandingListInfo[] = [
     {
+      img: covidTimeline,
+      title: "My pandemic Stories",
+      description:
+        "Platform serves as a digital communication and knowledge translation tool to visually present the progression of major milestones of the COVID-19 pandemic",
+      link: "https://www.mypandemicstories.ca/",
+    },
+    {
+      img: learnDiabetes,
+      title: "Learn Diabetes",
+      description:
+        "ELearning platform that address the educational journey of the patient and their family from diagnosis through to day-to-day management",
+      link: "https://learn-diabetes-dev.bcchdigital.ca/",
+    },
+    {
+      img: compass,
+      title: "Compass Mental Health",
+      description:
+        "Complete redesign and adding new functionality for current website (https://compassbc.ca/) to provide valuable resources for its intended audiences",
+      link: "https://compass.bcchdigital.ca/",
+    },
+    {
       img: waterly,
       title: "Waterly",
       description:
@@ -53,7 +77,7 @@ const Portfolio = () => {
       img: waterly_landing,
       title: "Waterly-Landing",
       description:
-        "Landing page for andriod application. Was created from scratch using HTML/CSS, TypeScript, React, Material-UI and Firebase.",
+        "Landing page for andriod application. Was created from scratch using HTML/CSS, TypeScript, React, Material-UI and Firebase",
       link: "https://waterly.web.app/",
     },
     {
@@ -63,6 +87,7 @@ const Portfolio = () => {
         "I've implemented a new design for the landing page which extended functionality and user-friendly process, using React, TypeScript, and Material-UI",
       link: "https://www.okhelp.org/",
     },
+
   ];
 
   const renderList = (list: LandingListInfo[]) =>

@@ -38,10 +38,12 @@ function createData(description: string) {
 }
 
 const skillsList = [
-  createData("TypeScript, JavaScript, Java"),
-  createData("React, Material-UI, Bootstrap, Firebase"),
+  createData("TypeScript, JavaScript, Java, GraphQL, SQL"),
+  createData("React, NextJS, Strapi"),
+  createData("Azure, Algolia, Firebase, Netlify"),
   createData("HTML5, CSS3, Node.js"),
-  createData("PostgreSQL, MySQL"),
+  createData("Tailwind, Emotion,  Material-UI, Bootstrap"),
+  createData("PostgreSQL, MongoDB"),
   createData("Git"),
   createData("Jest/Enzyme"),
   createData("Figma"),
@@ -58,7 +60,7 @@ export default function About() {
             with 2 years of experience, located in Vancouver, BC. My background
             is in Computer Science and I did my master's degree at Lodz
             University of Technology, Poland. I am very passionate and dedicated
-            to my work and always open to learning new technologies and
+            to my work, always open to learning new technologies and
             frameworks. I am an ambitious and exceptionally organized person,
             who is recognized for the ability to communicate effectively, work
             as part of a team and solve problems creatively.
