@@ -58,7 +58,7 @@ export default function Banner() {
         <br />
         <br />
         <br />
-        <span className={classes.bannerText}>I am a Front End Developer</span>
+        <span className={classes.bannerText}>I am a Front End Engineer</span>
         <br />
         <br />
         <br />

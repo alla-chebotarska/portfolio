@@ -56,7 +56,7 @@ export default function About() {
       <Grid container className={classes.aboutContainer}>
         <Grid item xs={12} md={6}>
           <Typography variant="body1">
-            My name is Alla Chebotarska and I'm a Front End Developer
+            My name is Alla Chebotarska and I'm a Front End Engineer
             with 2 years of experience, located in Vancouver, BC. My background
             is in Computer Science and I did my master's degree at Lodz
             University of Technology, Poland. I am very passionate and dedicated
